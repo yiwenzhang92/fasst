@@ -4,10 +4,10 @@
 	"base_port_index": 0,
 	"num_ports": 1,
 	"num_qps": 1,
-	"postlist": 16,
+	"postlist": 8,
 	"numa_node": 0,
 	"num_machines": 2,
-	"workers_per_machine": 14,
+	"workers_per_machine": 4,
 	"req_batch_size": 1,
 	"size_req": 32,
 	"size_resp": 32
