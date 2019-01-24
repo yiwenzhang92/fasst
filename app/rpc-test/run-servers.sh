@@ -1,7 +1,7 @@
 #!/bin/bash
 source $(dirname $0)/../../util/helpers.sh
 
-export HRD_REGISTRY_IP="192.168.0.1"
+export HRD_REGISTRY_IP="192.168.0.11"
 export MLX5_SHUT_UP_BF=0
 export MLX5_SINGLE_THREADED=1
 export MLX4_SINGLE_THREADED=1
@@ -26,6 +26,7 @@ if [ "$1" -eq 0 ]; then
 	sleep 1
 fi
 
+#sudo LD_LIBRARY_PATH=/usr/lib64/ -E \
 sudo LD_LIBRARY_PATH=/usr/local/lib/ -E \
 	numactl --membind=0 --cpunodebind=0 ./main --machine-id $1 &
 
