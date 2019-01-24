@@ -309,6 +309,9 @@ void hrd_create_dgram_qps(struct hrd_ctrl_blk *cb)
 		create_attr.cap.max_send_sge = 1;
 		create_attr.cap.max_recv_sge = 1;
 		create_attr.cap.max_inline_data = HRD_MAX_INLINE;
+////frdma
+		create_attr.qp_context = (void *)1;
+////
 
 		cb->dgram_qp[i] = ibv_create_qp(cb->pd, &create_attr);
 		assert(cb->dgram_qp[i] != NULL);
